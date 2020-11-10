@@ -16,4 +16,4 @@ Hope you like it :)
 
 ## Live Demo
 
-Go to [The Deli Dumpling](http://thedelidumpling.surge.sh/) to view a live demo of the page\.  
+Go to [Deli Dumplings](http://delidumplings.surge.sh/) to view a live demo of the page\.  
