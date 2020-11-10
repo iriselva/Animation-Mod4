@@ -1,0 +1,272 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Comfortaa', cursive;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 0 20px 0;
+}
+
+header {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 40px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #303030;
+}
+
+.column-container {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    justify-content: space-between; 
+    gap: 24px;
+}
+
+.first-div,
+.second-div,
+.third-div {
+    height: 20rem;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.first-div {
+    background-color: #C0E5CA;
+    position: relative;
+}
+
+.second-div {
+    background-color: #F6DFD7;
+}
+
+.third-div {
+    background-color: #EDE6B0;
+    position: relative;
+}
+
+/* dropdown */
+
+.type-dropdown {
+    background-color: #5F9595;
+}
+
+.number-dropdown {
+    background-color: #F6AFAD;
+}
+
+.pickup-dropdown {
+    background-color: #F0BC67;
+}
+
+.type-dropdown:hover,
+.number-dropdown:hover, 
+.pickup-dropdown:hover {
+    color: #303030;
+} 
+
+.type-dropdown,
+.number-dropdown,
+.pickup-dropdown {
+    color: white;
+    padding: 16px 0 16px 0;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    width: 20rem;
+    text-align: center;
+}
+
+/* Confirm button */
+  
+.btn-container {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0 20px 0;
+}
+
+button {
+    font-family: 'Comfortaa', cursive;
+}
+
+.confirm-btn {
+    background-color: white;
+    color: #303030;
+    font-weight: 700;
+    padding: 10px;
+    font-size: 18px;
+    border: 3px solid #303030;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 200px;
+    height: 80px;
+}
+
+.confirm-btn:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+
+
+/* Dropdown menu */
+
+.hide {
+    max-height: 0 !important;
+}
+
+.dropdown{
+	width: 20rem;
+    margin-bottom: 1em;
+}
+
+.dropdown .title{	
+	width: 100%;
+}
+
+.dropdown .menu{
+	transition: max-height .5s ease-out;
+	max-height: 20em;
+    overflow: hidden;
+    border: 1px solid #303030;
+}
+
+.dropdown .menu .option{
+    font-size: 18px;
+	padding: 1em;
+    text-align: center;
+}
+
+.dropdown .menu .option:hover{
+	background: rgba(0,0,0,0.2);
+}
+
+.pointerCursor:hover{
+	cursor: pointer;
+}
+
+
+/* images animation */
+
+/* Sticks */
+
+.stick-one {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    z-index: 1;
+    transition: ease-in 500ms;
+    width: 45%;
+    height: 45%;
+}
+
+/* Stick rotates when hovering */
+.stick-one:hover {
+    transform: rotate(-20deg);
+}
+
+.stick-two {
+    position: absolute;
+    transform: rotate(10deg);
+    bottom: 80px;
+    left: 110px;
+    z-index: 0;
+    width: 45%;
+    height: 45%;
+}
+
+/* dumpling */
+
+/* When the site is opend the dumpling jumps*/
+.dumpling {
+    animation: jump 2.5s ease;
+}
+
+@keyframes jump {
+    0%  { transform: translate(-0%, -0%) }
+    30% { transform: translate(-0%, -15%) }
+    40% { transform: translate(-0%, -5%) }
+    50% { transform: translate(-0%, -15%) }
+    60% { transform: translate(-0%, -5%) }
+    70% { transform: translate(-0%, -15%) }
+    80% { transform: translate(-0%, -5%) }
+    100% { transform: translate(-0%, -0%) }
+} 
+
+/* basket and steam */
+
+.basket {
+    position: absolute;
+    bottom: 80px;
+    z-index: 1;
+    width: 45%;
+    height: 45%;
+}
+
+/* Steam moves */
+.steam {
+    position: absolute;
+    top: 20px;
+    z-index: 0;
+    animation: steammove 5s linear infinite;
+}
+
+@keyframes steammove {
+    0%  {transform: skewX(-5deg);}
+    25% {transform: skewX(5deg);}
+    50% {transform: skewX(-5deg);}
+    75% {transform: skewX(5deg);}
+    100%{transform: skewX(-5deg);}
+} 
+
+/* Confirm order message */
+
+.confirm-msg {
+    border: 3px solid #303030;
+    border-radius: 20px;
+    width: 20rem;
+    text-align: center;
+    font-size: 18px;
+    position: fixed;
+    right: -340px;
+    top: 40px;
+    opacity: 0;
+    background: white;
+    z-index: 3;
+    transition: right 500ms ease, opacity 300ms ease 200ms;
+
+}
+
+.confirm-msg.show {
+    opacity: 1;
+    right: 40px;
+}
+
+#order-message {
+    display: block;
+}
+
+/* small screen */
+
+@media screen and (max-width: 1000px) {
+    .column-container {
+      flex-direction: column;
+    }
+}

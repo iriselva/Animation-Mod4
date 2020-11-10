@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <title>Animation</title>
+</head>
+    
+<body>
+
+        <main>
+
+            <!-- Header, title and message -->
+            <header>
+
+                <div>
+                    <h1>deli</h1>
+                    <h1>dumplings</h1>
+                </div>
+                
+
+                <div class="confirm-msg" id="order-message">
+                    <h4>Your order has been placed</h4>
+                </div>
+
+            </header>
+            
+            <!-- Three columns with dropdown -->
+            <section class="column-container">
+
+                <div>
+                    
+                    <div class="first-div">
+                        <img src="images/stick.svg" alt="stick" class="stick-one">
+                        <img src="images/stick.svg" alt="stick" class="stick-two">
+                    </div>
+                    
+
+                    <div class='dropdown' id="type">
+                        <div class='title pointerCursor type-dropdown'>type</div>
+                        
+                        <div class='menu pointerCursor hide'>
+                            <div class='option' id='option1'>Veggie mushroom</div>
+                            <div class='option' id='option2'>Pork and chive</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <div class="second-div">
+                        <img src="images/dumpling.svg" alt="dumpling" class="dumpling">
+                    </div>
+                    
+                    <div class='dropdown' id='quantity'>
+                        <div class='title pointerCursor number-dropdown'>quantity</div>
+                        
+                        <div class='menu pointerCursor hide'>
+                            <div class='option' id='option3'>10 pieces</div>
+                            <div class='option' id='option4'>20 pieces</div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <div >
+
+                    <div class="third-div">
+                        <img src="images/steam.svg" alt="steam" class="steam">
+                        <img src="images/basket.svg" alt="basket" class="basket">
+                    </div>
+
+                    <div class='dropdown' id='where'>
+                        <div class='title pointerCursor pickup-dropdown'>where</div>
+                        <div class='menu pointerCursor hide'>
+                            <div class='option' id='option5'>Delivery</div>
+                            <div class='option' id='option6'>Pickup</div>
+                        </div>
+
+                    </div>
+
+            </section>
+
+            <!-- Confirm button -->
+            <div class="btn-container">
+                <button class="confirm-btn" id="confirm">confirm order</button>
+            </div>
+            
+
+        </main>
+
+    <script src="script.js"></script>
+    </body>
+</html>
